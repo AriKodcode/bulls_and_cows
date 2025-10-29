@@ -18,19 +18,18 @@ def is_won(bulls: int, length: int) -> bool:
         return False
 
 
-game_state = {
-  "secret": str,
-  "length": int,
-  "max_tries": int | None,
-  "tries_used": int,
-  "unique_digits": bool,
-  "allow_leading_zero": bool,
-  "history": list[tuple[str, int, int]],
-  "seen": set[str]
-}
-
 def init_state() -> dict:
-    return {}
+    game_state = {
+        "secret": str,
+        "length": int,
+        "max_tries": int | None,
+        "tries_used": int,
+        "unique_digits": bool,
+        "allow_leading_zero": bool,
+        "history": list[tuple[str, int, int]],
+        "seen": set[str]
+    }
+    return game_state
 
 def apply_guess() -> tuple[int, int]:
     return (3,3)
