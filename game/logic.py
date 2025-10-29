@@ -1,7 +1,20 @@
-def score_guess() -> tuple[int, int]:
+def score_guess(secret: str, guess: str) -> tuple[int, int]:
+    bulls = 0
+    cows = 0
+    for i in range(4):
+        if secret[i] == guess[i]:
+            bulls += 1
+        else:
+            for j in range(4):
+                if guess[i] == secret[j]:
+                    cows += 1
+    result = (bulls,cows)
+    return result
+
+
 
 def is_won() -> bool:
-
+    return True
 
 game_state = {
   "secret": str,
@@ -15,9 +28,9 @@ game_state = {
 }
 
 def init_state() -> dict:
-
+    return {}
 
 def apply_guess() -> tuple[int, int]:
-
+    return (3,3)
 
 
