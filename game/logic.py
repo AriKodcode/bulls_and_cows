@@ -31,7 +31,9 @@ def init_state() -> dict:
     }
     return game_state
 
-def apply_guess() -> tuple[int, int]:
+def apply_guess(state: dict, guess: str) -> tuple[int, int]:
+
+
     return (3,3)
 
 

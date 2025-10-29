@@ -1,9 +1,6 @@
-def prompt_guess() -> str;
-
-
-
-
-def print_feedback() -> None:
+def prompt_guess() -> str:
+    guess = input("Press 4 numbers between 1 - 9")
+    return guess
 
 
 
