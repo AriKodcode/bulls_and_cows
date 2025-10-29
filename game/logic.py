@@ -11,10 +11,12 @@ def score_guess(secret: str, guess: str) -> tuple[int, int]:
     result = (bulls,cows)
     return result
 
+def is_won(bulls: int, length: int) -> bool:
+    if bulls == length:
+        return True
+    else:
+        return False
 
-
-def is_won() -> bool:
-    return True
 
 game_state = {
   "secret": str,
