@@ -17,4 +17,8 @@ def is_valid_guess(guess: str, length: int = 4, *, unique_digits: bool = True) -
             break
     return result
 
-
+def is_new_guess(guess: str, history: set[str]) -> bool:
+    if guess in history:
+        return True
+    else:
+        return False
