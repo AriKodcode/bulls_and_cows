@@ -12,4 +12,4 @@ def generate_secret(length: int = 4, *, unique_digits: bool = True, allow_leadin
     return secret_nums
 
 
-print(generate_secret())
+
