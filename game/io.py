@@ -10,5 +10,5 @@ def print_status(state_game_state) -> None:
     print(f"Summary: \n tries used: {state_game_state["tries_used"]} \n history: {state_game_state["history"]}")
 
 
-def print_result(state_game_state, won: bool) -> None:
-    print(f"you win! The secret numbers is: {state_game_state["secret"]}  ")
+def print_result(state_game_state, won: str) -> None:
+    print(f"{won}! The secret numbers is: {state_game_state["secret"]}  ")
