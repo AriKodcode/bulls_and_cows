@@ -2,11 +2,8 @@ def is_valid_guess(guess: str, length: int = 4, *, unique_digits: bool = True) -
     check_guess = ""
     result = ()
     while len(check_guess) != 4:
-        for num in guess:
-            if not num.isdigit():
-                result = (False, "pleas input numbers only")
-                break
-        if result == (False, "pleas input numbers only"):
+        if not guess.isdigit():
+            result = (False, "pleas input numbers only")
             break
         if len(guess) != length:
             result = (False, "not input 4 numbers")
