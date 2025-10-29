@@ -2,6 +2,12 @@ def is_valid_guess(guess: str, length: int = 4, *, unique_digits: bool = True) -
     check_guess = ""
     result = ()
     while len(check_guess) != 4:
+        for num in guess:
+            if not num.isdigit():
+                result = (False, guess)
+                break
+        if result == (False, guess):
+            break
         if len(guess) != length:
             result = (False, guess)
             break
@@ -19,6 +25,6 @@ def is_valid_guess(guess: str, length: int = 4, *, unique_digits: bool = True) -
 
 def is_new_guess(guess: str, history: set[str]) -> bool:
     if guess in history:
-        return True
-    else:
         return False
+    else:
+        return True
